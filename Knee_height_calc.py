@@ -22,14 +22,14 @@ if calc_type['Stevenson']:
 
 if calc_type['Argentine_CP']:
     
-    GMFCS={'I-III':False,'IV-V':False}
-    gender={key:False for key in GMFCS}
+    gmfcs={'I-III':False,'IV-V':False}
+    gender={key:False for key in gmfcs}
 
     function= st.selectbox("Select GMFCS group:", ["I-III", "IV-V"])
-    if function=='I=III':
-        GMFCS['I-III']=True
+    if function=='I-III':
+        gmfcs['I-III']=True
     else:
-        GMFCS['IV-V']=True   
+        gmfcs['IV-V']=True   
     dob = st.date_input("Enter the date of birth:", value=date.today(), min_value=date(2005, 1, 1),
     format="DD/MM/YYYY")
 
@@ -39,10 +39,10 @@ if calc_type['Argentine_CP']:
     age_months = delta_year*12 + delta_month
     age_years=age_months/12
     st.write(f'This equates to {age_years:.1f} years')
-    if GMFCS['I-III']:
+    if gmfcs['I-III']:
         ht=1.5*kh+2.28*age_years+51
         st.markdown(f"<h1 style='font-size:40px;'>The approximate height is {ht:.1f}cm using Argentine for GMFCS I-III</h1> ", unsafe_allow_html=True)
-    if GMFCS['IV-V']:
+    if gmfcs['IV-V']:
         ht=2.13*kh+0.91*age_years+37   
         st.markdown(f"<h1 style='font-size:40px;'>The approximate height is {ht:.1f}cm using Argentine for GMFCS IV-V</h1> ", unsafe_allow_html=True)
 
