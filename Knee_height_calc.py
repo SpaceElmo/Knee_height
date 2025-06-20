@@ -5,7 +5,7 @@ import streamlit as st
 
 st.title('Height calculator from entered knee height')
 st.write('Three alternative methods are used here. The Argentine method is CP specific. Please enter knee height in cm')
-st.write('This app does not caclutate centile but that may be a future feature')
+st.write('This app does not caclutate centile but that may be a future feature. The code is available to fork at (https://github.com/SpaceElmo/Knee_height)')
 format ="%d/%m/%Y"
 calc_type={'Stevenson':True,'Indonesian':True,'Argentine_CP':True}
 calc_type={key:False for key in calc_type}
