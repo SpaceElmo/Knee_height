@@ -3,6 +3,7 @@ import numpy as np
 from datetime import datetime,date
 import streamlit as st
 
+st.set_page_config(page_title="Knee height to approx height calculator")
 st.title('Height calculator from entered knee height')
 st.write('Three alternative methods are used here. The Argentine method is CP specific. Please enter knee height in cm')
 st.write('This app does not caclutate centile but that may be a future feature. The code is available to fork at (https://github.com/SpaceElmo/Knee_height)')
